@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
 
+    Route::get('foto', 'Admin\fotoController@index')->name('admin.foto');
+
     Route::get('kategori', 'Admin\KategoriController@index')->name('admin.kategori');
 
     Route::get('user', 'Admin\UsersController@index')->name('admin.user');
